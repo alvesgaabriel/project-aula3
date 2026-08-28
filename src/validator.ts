@@ -1,3 +1,9 @@
 export function validateTitle(title: string): boolean {
-  return title.length > 0;
+  const trimmedTitle = title.trim();
+
+  if (trimmedTitle.length === 0) {
+    return false;
+  }
+
+  return trimmedTitle.length >= 5 && trimmedTitle.length <= 100;
 }
